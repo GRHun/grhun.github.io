@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leetcode on ʕ•ᴥ•ʔ RHanbao&#39;s Blog</title>
+    <link>http://hanburger.space/blog/leetcode/</link>
+    <description>Recent content in Leetcode on ʕ•ᴥ•ʔ RHanbao&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2020, Jane Doe.</copyright>
+    <lastBuildDate>Sun, 14 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://hanburger.space/blog/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>刷题记录 - Leetcode编程基础 0 到 1</title>
+      <link>http://hanburger.space/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95-leetcode%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-0-%E5%88%B0-1/</link>
+      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://hanburger.space/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95-leetcode%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80-0-%E5%88%B0-1/</guid>
+      <description>&lt;p&gt;首先是测试博客对代码显示的效果。&lt;/p&gt;&#xA;&lt;p&gt;记录我在Java 入门做的简单题目，主要用于熟悉基础语法，题目都来自Leetcode的编程基础 0 到 1 ，链接在此&lt;a href=&#34;https://leetcode.cn/studyplan/programming-skills/&#34;&gt;🔗&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+    </item>
+  </channel>
+</rss>
