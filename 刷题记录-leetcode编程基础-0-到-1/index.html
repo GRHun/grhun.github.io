@@ -31,7 +31,7 @@
 <meta itemprop="name" content="刷题记录 - Leetcode编程基础 0 到 1">
 <meta itemprop="description" content="."><meta itemprop="datePublished" content="2024-01-14T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2024-01-14T00:00:00+00:00" />
-<meta itemprop="wordCount" content="640"><meta itemprop="image" content="http://hanburger.space/images/share.png" />
+<meta itemprop="wordCount" content="571"><meta itemprop="image" content="http://hanburger.space/images/share.png" />
 <meta itemprop="keywords" content="编程入门,Java,Leetcode," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -251,34 +251,11 @@
 </p>
 
 <content>
-  <p>首先是测试博客对代码显示的效果。</p>
-<p>记录我在Java 入门做的简单题目，主要用于熟悉基础语法，题目都来自Leetcode的编程基础 0 到 1 ，链接在此<a href="https://leetcode.cn/studyplan/programming-skills/">🔗</a>。</p>
+  <p>记录我在Java 入门做的简单题目，主要用于熟悉基础语法。目前还在学习阶段，因此解法还比较笨拙，只用于自己复习。以下题目都来自Leetcode的编程基础 0 到 1 ，链接在此<a href="https://leetcode.cn/studyplan/programming-skills/">🔗</a>。</p>
+<p>说明：代码中其他解法均来自Leetcode题解。</p>
 <hr>
-<h1 id="有效的字母异位词httpsleetcodecnproblemsvalid-anagramdescriptionenvtypestudy-plan-v2envidprogramming-skills"><a href="(https://leetcode.cn/problems/valid-anagram/description/?envType=study-plan-v2&amp;envId=programming-skills)">有效的字母异位词</a></h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">+++</span>
-</span></span><span style="display:flex;"><span>title <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">&#39;</span>刷题记录 <span style="color:#f92672">-</span> Leetcode编程基础 0 到 1<span style="color:#960050;background-color:#1e0010">&#39;</span>
-</span></span><span style="display:flex;"><span>date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2024-01-14&#34;</span>
-</span></span><span style="display:flex;"><span>description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;.&#34;</span>
-</span></span><span style="display:flex;"><span>draft <span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>tags <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;编程入门&#34;</span>, <span style="color:#e6db74">&#34;Java&#34;</span>,<span style="color:#e6db74">&#34;Leetcode&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">+++</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>记录我在Java 入门做的简单题目<span style="color:#960050;background-color:#1e0010">，</span>主要用于熟悉基础语法<span style="color:#960050;background-color:#1e0010">。</span>目前还在学习阶段<span style="color:#960050;background-color:#1e0010">，</span>因此解法还比较笨拙<span style="color:#960050;background-color:#1e0010">，</span>只用于自己复习<span style="color:#960050;background-color:#1e0010">。</span>以下题目都来自Leetcode的编程基础 0 到 1 <span style="color:#960050;background-color:#1e0010">，</span>链接在此<span style="color:#f92672">[</span><span style="color:#960050;background-color:#1e0010">🔗</span><span style="color:#f92672">]</span>(https:<span style="color:#75715e">//leetcode.cn/studyplan/programming-skills/)。</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>说明<span style="color:#960050;background-color:#1e0010">：</span>代码中其他解法均来自Leetcode题解<span style="color:#960050;background-color:#1e0010">。</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span>
-</span></span><span style="display:flex;"><span> <span style="color:#f92672">&lt;!--</span>more<span style="color:#f92672">--&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">[</span>242.<span style="color:#a6e22e">有效的字母异位词</span><span style="color:#f92672">]</span>(https:<span style="color:#75715e">//leetcode.cn/problems/valid-anagram/description/?envType=study-plan-v2&amp;envId=programming-skills)</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>java
+<h1 id="242有效的字母异位词httpsleetcodecnproblemsvalid-anagramdescriptionenvtypestudy-plan-v2envidprogramming-skills"><a href="(https://leetcode.cn/problems/valid-anagram/description/?envType=study-plan-v2&amp;envId=programming-skills)">242.有效的字母异位词</a></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>java
 </span></span><span style="display:flex;"><span><span style="color:#f92672">package</span> com.rh.leetcode.isAnagram;  
 </span></span><span style="display:flex;"><span><span style="color:#75715e">/*  
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。  
@@ -340,37 +317,28 @@
 </span></span><span style="display:flex;"><span>    }  
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#f92672">[</span>459. 重复的子字符串<span style="color:#f92672">]</span>(https:<span style="color:#75715e">//leetcode.cn/problems/repeated-substring-pattern/)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> 给定一个非空的字符串 <span style="color:#960050;background-color:#1e0010">`</span>s<span style="color:#960050;background-color:#1e0010">`</span> <span style="color:#960050;background-color:#1e0010">，</span>检查是否可以通过由它的一个子串重复多次构成<span style="color:#960050;background-color:#1e0010">。</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">**</span>示例 1:<span style="color:#f92672">**</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">**</span>输入:<span style="color:#f92672">**</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abab&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">**</span>输出:<span style="color:#f92672">**</span> <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">**</span>解释:<span style="color:#f92672">**</span> 可由子串 <span style="color:#e6db74">&#34;ab&#34;</span> 重复两次构成<span style="color:#960050;background-color:#1e0010">。</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">**</span>示例 2:<span style="color:#f92672">**</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">**</span>输入:<span style="color:#f92672">**</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;aba&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">**</span>输出:<span style="color:#f92672">**</span> <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">**</span>示例 3:<span style="color:#f92672">**</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">**</span>输入:<span style="color:#f92672">**</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcabcabcabc&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">**</span>输出:<span style="color:#f92672">**</span> <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">**</span>解释:<span style="color:#f92672">**</span> 可由子串 <span style="color:#e6db74">&#34;abc&#34;</span> 重复四次构成<span style="color:#960050;background-color:#1e0010">。</span> (或子串 <span style="color:#e6db74">&#34;abcabc&#34;</span> 重复两次构成<span style="color:#960050;background-color:#1e0010">。</span>)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">**</span>提示<span style="color:#960050;background-color:#1e0010">：</span><span style="color:#f92672">**</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span> <span style="color:#960050;background-color:#1e0010">`</span>1 <span style="color:#f92672">&lt;=</span> s.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;=</span> 104<span style="color:#960050;background-color:#1e0010">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span> <span style="color:#960050;background-color:#1e0010">`</span>s<span style="color:#960050;background-color:#1e0010">`</span> 由小写英文字母组成
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">##</span> MySolution
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>java
-</span></span><span style="display:flex;"><span><span style="color:#f92672">package</span> com.rh.leetcode.repeatedSubstringPattern;  
+</span></span></code></pre></div><h1 id="459-重复的子字符串httpsleetcodecnproblemsrepeated-substring-pattern"><a href="https://leetcode.cn/problems/repeated-substring-pattern/">459. 重复的子字符串</a></h1>
+<blockquote>
+<p>给定一个非空的字符串 <code>s</code> ，检查是否可以通过由它的一个子串重复多次构成。</p>
+<p><strong>示例 1:</strong></p>
+<p><strong>输入:</strong> s = &ldquo;abab&rdquo;
+<strong>输出:</strong> true
+<strong>解释:</strong> 可由子串 &ldquo;ab&rdquo; 重复两次构成。</p>
+<p><strong>示例 2:</strong></p>
+<p><strong>输入:</strong> s = &ldquo;aba&rdquo;
+<strong>输出:</strong> false</p>
+<p><strong>示例 3:</strong></p>
+<p><strong>输入:</strong> s = &ldquo;abcabcabcabc&rdquo;
+<strong>输出:</strong> true
+<strong>解释:</strong> 可由子串 &ldquo;abc&rdquo; 重复四次构成。 (或子串 &ldquo;abcabc&rdquo; 重复两次构成。)</p>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 104</code></li>
+<li><code>s</code> 由小写英文字母组成</li>
+</ul>
+</blockquote>
+<h2 id="mysolution">MySolution</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.rh.leetcode.repeatedSubstringPattern;  
 </span></span><span style="display:flex;"><span>  
 </span></span><span style="display:flex;"><span>  
 </span></span><span style="display:flex;"><span><span style="color:#75715e">/*给定一个非空的字符串 s ，检查是否可以通过由它的一个子串重复多次构成。  
@@ -449,59 +417,42 @@
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;  
 </span></span><span style="display:flex;"><span>    }  
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>
+</span></span></code></pre></div><p>总结：思路很简单，是直接来到大脑的，暂时想不到更好的解法。但是写得很麻烦，不过提交情况比设想好。</p>
+<h2 id="solution1">Solution1</h2>
+<p>和我的思路差不多，但是更加简单的写法；</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution1</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">repeatedSubstringPattern</span>(String s) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> s.<span style="color:#a6e22e">length</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1; i <span style="color:#f92672">*</span> 2 <span style="color:#f92672">&lt;=</span> n; <span style="color:#f92672">++</span>i) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> 0) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">boolean</span> match <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i; j <span style="color:#f92672">&lt;</span> n; <span style="color:#f92672">++</span>j) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (s.<span style="color:#a6e22e">charAt</span>(j) <span style="color:#f92672">!=</span> s.<span style="color:#a6e22e">charAt</span>(j <span style="color:#f92672">-</span> i)) {
+</span></span><span style="display:flex;"><span>                        match <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>总结<span style="color:#960050;background-color:#1e0010">：</span>思路很简单<span style="color:#960050;background-color:#1e0010">，</span>是直接来到大脑的<span style="color:#960050;background-color:#1e0010">，</span>暂时想不到更好的解法<span style="color:#960050;background-color:#1e0010">。</span>但是写得很麻烦<span style="color:#960050;background-color:#1e0010">，</span>不过提交情况比设想好<span style="color:#960050;background-color:#1e0010">。</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">##</span> Solution1
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>和我的思路差不多<span style="color:#960050;background-color:#1e0010">，</span>但是更加简单的写法<span style="color:#960050;background-color:#1e0010">；</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>java
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution1</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">repeatedSubstringPattern</span>(String s) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> s.<span style="color:#a6e22e">length</span>();
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1; i <span style="color:#f92672">*</span> 2 <span style="color:#f92672">&lt;=</span> n; <span style="color:#f92672">++</span>i) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> 0) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">boolean</span> match <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i; j <span style="color:#f92672">&lt;</span> n; <span style="color:#f92672">++</span>j) {
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (s.<span style="color:#a6e22e">charAt</span>(j) <span style="color:#f92672">!=</span> s.<span style="color:#a6e22e">charAt</span>(j <span style="color:#f92672">-</span> i)) {
-</span></span><span style="display:flex;"><span>                        match <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">break</span>;
-</span></span><span style="display:flex;"><span>                    }
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (match) {
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (match) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">##</span> Solution2 
-</span></span><span style="display:flex;"><span>假设判断字符串 s<span style="color:#960050;background-color:#1e0010">（</span>n个字符构成<span style="color:#960050;background-color:#1e0010">）</span>是不是由重复子串构成的<span style="color:#960050;background-color:#1e0010">，</span>我们先将两个字串拼成一个大的字符串<span style="color:#960050;background-color:#1e0010">：</span>
-</span></span><span style="display:flex;"><span>S <span style="color:#f92672">=</span> s <span style="color:#f92672">+</span> s<span style="color:#960050;background-color:#1e0010">（</span>S 有2n个字符<span style="color:#960050;background-color:#1e0010">）；</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>字符串拼接的最底层思想应该是使用字符串移位来判断字符串是否由重复子串<span style="color:#960050;background-color:#1e0010">（</span>循环节<span style="color:#960050;background-color:#1e0010">）</span>构成<span style="color:#960050;background-color:#1e0010">，</span>因为 S 这个大的字符串其实包含了字符串s的所有移位字符串<span style="color:#960050;background-color:#1e0010">。</span>
-</span></span><span style="display:flex;"><span>令字符串字符索引从0开始<span style="color:#960050;background-color:#1e0010">，</span><span style="color:#f92672">[</span>m,n<span style="color:#f92672">]</span>表示S中索引为m到索引为n的这一段字符<span style="color:#960050;background-color:#1e0010">，</span>索引为闭区间<span style="color:#960050;background-color:#1e0010">，</span>则<span style="color:#f92672">[</span>0,n<span style="color:#f92672">-</span>1<span style="color:#f92672">]</span>即S的前一半字符表示原始字符串s<span style="color:#960050;background-color:#1e0010">；</span><span style="color:#f92672">[</span>1,n<span style="color:#f92672">]</span>表示s右移1位的状态<span style="color:#960050;background-color:#1e0010">；</span><span style="color:#f92672">[</span>2,n<span style="color:#f92672">+</span>1<span style="color:#f92672">]</span>表示s右移2位的状态<span style="color:#960050;background-color:#1e0010">；······；</span><span style="color:#f92672">[</span>n,2n<span style="color:#f92672">-</span>1<span style="color:#f92672">]</span>即S的后半拉字符串可以理解为s移n位的状态<span style="color:#960050;background-color:#1e0010">，</span>此时s已经移回了原始的状态了<span style="color:#960050;background-color:#1e0010">；</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>此外我们不难知道如果一个没有循环节的字符串在移位时必须要右移n次才能移回它的原始状态<span style="color:#960050;background-color:#1e0010">，</span>而有循环节的字符串最多只需要n<span style="color:#f92672">/</span>2次<span style="color:#960050;background-color:#1e0010">（</span>只有两个循环节<span style="color:#960050;background-color:#1e0010">）；</span>所以当S砍去首尾字符时<span style="color:#960050;background-color:#1e0010">，</span>对于没有循环节的字符串s<span style="color:#960050;background-color:#1e0010">，</span>相当于砍去了<span style="color:#f92672">[</span>0,n<span style="color:#f92672">-</span>1<span style="color:#f92672">]</span>的原始状态和<span style="color:#f92672">[</span>n,2n<span style="color:#f92672">-</span>1<span style="color:#f92672">]</span>这个移位n次的又回归原始的状态<span style="color:#960050;background-color:#1e0010">，</span>我们在<span style="color:#f92672">[</span>1,2n<span style="color:#f92672">-</span>2<span style="color:#f92672">]</span>范围内只能找到s移位1<span style="color:#960050;background-color:#1e0010">，</span>2<span style="color:#960050;background-color:#1e0010">，···，</span>n<span style="color:#f92672">-</span>1位时的状态<span style="color:#960050;background-color:#1e0010">，</span>所以在<span style="color:#f92672">[</span>1,2n<span style="color:#f92672">-</span>2<span style="color:#f92672">]</span>内是不存在无循环节的s的<span style="color:#960050;background-color:#1e0010">；</span>但是对于有循环节的s来说<span style="color:#960050;background-color:#1e0010">，</span>n<span style="color:#f92672">/</span>2 <span style="color:#f92672">&lt;=</span> n<span style="color:#f92672">-</span>1<span style="color:#960050;background-color:#1e0010">，</span>所以一定存在至少一个移位状态为s<span style="color:#960050;background-color:#1e0010">，</span>即最少存在一个s<span style="color:#960050;background-color:#1e0010">（</span>其实对于有循环节的s来说<span style="color:#960050;background-color:#1e0010">，</span>不考虑移位状态我们也能明白<span style="color:#f92672">[</span>1,2n<span style="color:#f92672">-</span>2<span style="color:#f92672">]</span>内一定至少有一个s<span style="color:#960050;background-color:#1e0010">，</span>例如对于有两个循环节的s<span style="color:#960050;background-color:#1e0010">：</span>组成S的前一个s的后一半字符 <span style="color:#f92672">+</span> 组成S的后一个s的前一半的字符 <span style="color:#f92672">==</span> s<span style="color:#960050;background-color:#1e0010">；</span>三个循环节的s更不用说了)<span style="color:#960050;background-color:#1e0010">；</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>java
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {  
+</span></span></code></pre></div><h2 id="solution2">Solution2</h2>
+<p>假设判断字符串 s（n个字符构成）是不是由重复子串构成的，我们先将两个字串拼成一个大的字符串：
+S = s + s（S 有2n个字符）；</p>
+<p>字符串拼接的最底层思想应该是使用字符串移位来判断字符串是否由重复子串（循环节）构成，因为 S 这个大的字符串其实包含了字符串s的所有移位字符串。
+令字符串字符索引从0开始，[m,n]表示S中索引为m到索引为n的这一段字符，索引为闭区间，则[0,n-1]即S的前一半字符表示原始字符串s；[1,n]表示s右移1位的状态；[2,n+1]表示s右移2位的状态；······；[n,2n-1]即S的后半拉字符串可以理解为s移n位的状态，此时s已经移回了原始的状态了；</p>
+<p>此外我们不难知道如果一个没有循环节的字符串在移位时必须要右移n次才能移回它的原始状态，而有循环节的字符串最多只需要n/2次（只有两个循环节）；所以当S砍去首尾字符时，对于没有循环节的字符串s，相当于砍去了[0,n-1]的原始状态和[n,2n-1]这个移位n次的又回归原始的状态，我们在[1,2n-2]范围内只能找到s移位1，2，···，n-1位时的状态，所以在[1,2n-2]内是不存在无循环节的s的；但是对于有循环节的s来说，n/2 &lt;= n-1，所以一定存在至少一个移位状态为s，即最少存在一个s（其实对于有循环节的s来说，不考虑移位状态我们也能明白[1,2n-2]内一定至少有一个s，例如对于有两个循环节的s：组成S的前一个s的后一半字符 + 组成S的后一个s的前一半的字符 == s；三个循环节的s更不用说了)；</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {  
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">repeatedSubstringPattern</span>(String s) {  
 </span></span><span style="display:flex;"><span>        String str <span style="color:#f92672">=</span> s <span style="color:#f92672">+</span> s;  
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> str.<span style="color:#a6e22e">substring</span>(1, str.<span style="color:#a6e22e">length</span>() <span style="color:#f92672">-</span> 1).<span style="color:#a6e22e">contains</span>(s);  
 </span></span><span style="display:flex;"><span>    }  
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>s
 </span></span></code></pre></div>
 </content>
 <p>
