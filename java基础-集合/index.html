@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://hanburger.space/images/favicon.png" />
+<title>Java基础-集合 | ʕ•ᴥ•ʔ RHanbao&#39;s Blog</title>
+<meta name="title" content="Java基础-集合" />
+<meta name="description" content="为面试准备." />
+<meta name="keywords" content="Java,变成," />
+
+
+<meta property="og:title" content="Java基础-集合" />
+<meta property="og:description" content="为面试准备." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://hanburger.space/java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88/" /><meta property="og:image" content="http://hanburger.space/images/share.png" /><meta property="article:section" content="blog" />
+
+<meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://hanburger.space/images/share.png" /><meta name="twitter:title" content="Java基础-集合"/>
+<meta name="twitter:description" content="为面试准备."/>
+
+
+
+<meta itemprop="name" content="Java基础-集合">
+<meta itemprop="description" content="为面试准备.">
+
+<meta itemprop="wordCount" content="51"><meta itemprop="image" content="http://hanburger.space/images/share.png" />
+<meta itemprop="keywords" content="Java,变成," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1 {
+    color: rgb(173, 50, 95);
+  }
+
+  h2 
+  {
+    color: rgb(16, 112, 10);
+  }
+
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: rgb(6, 3, 3);
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 80%;
+  }
+
+  img {
+    max-width: 80%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+    font-family: Consolas;
+
+  }
+
+  pre code {
+    color: rgb(56, 56, 56);
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 16px;
+    overflow-x: auto;
+    font-family: Consolas;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1 {
+    color: rgb(173, 50, 95);
+  }
+  
+    h2 {
+    color: rgb(16, 112, 10);
+  }
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>ʕ•ᴥ•ʔ RHanbao&#39;s Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+<a href="/about/">About</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>Java基础-集合</h1>
+<p>
+  <i>
+    <time datetime='0001-01-01' pubdate>
+      01 Jan, 0001
+    </time>
+  </i>
+</p>
+
+<content>
+  <h1 id="hashmap">HashMap</h1>
+<h2 id="hashmap-的底层实现httpsjavaguidecnjavacollectionjava-collection-questions-02htmlhashmap-e79a84e5ba95e5b182e5ae9ee78eb0"><a href="https://javaguide.cn/java/collection/java-collection-questions-02.html#hashmap-%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0">HashMap 的底层实现</a></h2>
+<h3 id="实现原理">实现原理</h3>
+<p><code>HashMap</code>  :底层使用hash表数据结构，即数组加链表或红黑树</p>
+<p><strong>HashMap的jdk1.7和jdk1.8有什么区别？</strong></p>
+<ol>
+<li>JDK1.8之前采用的是拉链法，链表和数组相结合</li>
+<li>JDK1.8之后采用数组+链表+红黑树，链表长度大于8且数组长度大于64则会从链表转化为红黑树。
+（如果当前数组的长度小于 64，那么会选择先进行数组扩容，而不是转换为红黑树）</li>
+</ol>
+<p><img src="https://image-host-typora.oss-cn-chengdu.aliyuncs.com/images/20240320222439.png" alt="image.png"></p>
+<p><img src="https://image-host-typora.oss-cn-chengdu.aliyuncs.com/images/20240320222445.png" alt="image.png"></p>
+<h1 id="字符串这一类">字符串这一类</h1>
+<h2 id="stringbuilder">StringBuilder</h2>
+<p><code>StringBuilder</code> 和 <code>String</code> 是 Java 中用于处理字符串的两个不同的类，它们之间有一些关键的区别。</p>
+<ol>
+<li>
+<p><strong>可变性：</strong></p>
+<ul>
+<li><code>StringBuilder</code> 是可变的，即你可以通过调用方法（例如 <code>append()</code>、<code>insert()</code> 等）来更改其内容。这对于需要频繁拼接字符串的情况非常有用，因为它避免了每次更改字符串时都创建一个新的对象。</li>
+<li><code>String</code> 是不可变的，一旦创建了字符串对象，就不能更改其内容。每次对字符串进行操作（例如拼接、修改）时，都会创建一个新的字符串对象。</li>
+</ul>
+</li>
+<li>
+<p><strong>性能：</strong></p>
+<ul>
+<li>由于 <code>StringBuilder</code> 是可变的，它通常比频繁操作字符串时的 <code>String</code> 更高效。因为 <code>StringBuilder</code> 不需要每次都创建新的对象，而是在原有的基础上进行修改。</li>
+<li>在需要频繁修改字符串的情况下，使用 <code>StringBuilder</code> 可以提升性能。</li>
+</ul>
+</li>
+<li>
+<p><strong>线程安全：</strong></p>
+<ul>
+<li><code>StringBuilder</code> 不是线程安全的，它是非同步的。如果多个线程同时访问同一个 <code>StringBuilder</code> 实例，并且至少有一个线程修改了该实例，那么必须通过外部同步来确保其安全性。</li>
+<li><code>String</code> 是线程安全的，因为它是不可变的。多个线程可以安全地共享同一个 <code>String</code> 实例，而不必担心竞争条件。</li>
+</ul>
+</li>
+</ol>
+<p>如果你在代码中需要频繁修改字符串内容，且不需要线程安全性，那么选择 <code>StringBuilder</code> 是更好的选择。如果你需要创建一个不可修改的字符串，或者在多线程环境中操作字符串时需要线程安全性，那么选择 <code>String</code> 更合适。</p>
+
+</content>
+<p>
+  
+  <a href="http://hanburger.space/blog/java/">#Java</a>
+  
+  <a href="http://hanburger.space/blog/%E5%8F%98%E6%88%90/">#变成</a>
+  
+</p>
+
+  </main>
+  <footer>Thanks for your visit. The site is made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>密码学 on ʕ•ᴥ•ʔ RHanbao&#39;s Blog</title>
+    <link>http://hanburger.space/blog/%E5%AF%86%E7%A0%81%E5%AD%A6/</link>
+    <description>Recent content in 密码学 on ʕ•ᴥ•ʔ RHanbao&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2020, Jane Doe.</copyright>
+    <lastBuildDate>Fri, 08 Mar 2024 15:08:15 +0800</lastBuildDate>
+    <atom:link href="http://hanburger.space/blog/%E5%AF%86%E7%A0%81%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>面试小抄-密码学</title>
+      <link>http://hanburger.space/%E9%9D%A2%E8%AF%95%E5%B0%8F%E6%8A%84-%E5%AF%86%E7%A0%81%E5%AD%A6/</link>
+      <pubDate>Fri, 08 Mar 2024 15:08:15 +0800</pubDate>
+      <guid>http://hanburger.space/%E9%9D%A2%E8%AF%95%E5%B0%8F%E6%8A%84-%E5%AF%86%E7%A0%81%E5%AD%A6/</guid>
+      <description>&lt;p&gt;密码学基础。&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+    </item>
+  </channel>
+</rss>

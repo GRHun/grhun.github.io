@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Java on ʕ•ᴥ•ʔ RHanbao&#39;s Blog</title>
-    <link>http://hanburger.space/blog/java/</link>
-    <description>Recent content in Java on ʕ•ᴥ•ʔ RHanbao&#39;s Blog</description>
+    <title>变成 on ʕ•ᴥ•ʔ RHanbao&#39;s Blog</title>
+    <link>http://hanburger.space/blog/%E5%8F%98%E6%88%90/</link>
+    <description>Recent content in 变成 on ʕ•ᴥ•ʔ RHanbao&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2020, Jane Doe.</copyright>
-    <atom:link href="http://hanburger.space/blog/java/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://hanburger.space/blog/%E5%8F%98%E6%88%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java基础-集合</title>
       <link>http://hanburger.space/java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88/</link>
