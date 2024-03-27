@@ -7,13 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2020, Jane Doe.</copyright>
+    <lastBuildDate>Thu, 21 Mar 2024 15:08:15 +0800</lastBuildDate>
     <atom:link href="http://hanburger.space/blog/%E5%8F%98%E6%88%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Java基础-集合</title>
-      <link>http://hanburger.space/java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://hanburger.space/java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88/</guid>
-      <description>HashMap HashMap 的底层实现 实现原理 HashMap :底层使用hash表数据结构，即数组加链表或红黑树&#xA;HashMap的jdk1.7和jdk1.8有什么区别？&#xA;JDK1.8之前采用的是拉链法，链表和数组相结合 JDK1.8之后采用数组+链表+红黑树，链表长度大于8且数组长度大于64则会从链表转化为红黑树。 （如果当前数组的长度小于 64，那么会选择先进行数组扩容，而不是转换为红黑树） 字符串这一类 StringBuilder StringBuilder 和 String 是 Java 中用于处理字符串的两个不同的类，它们之间有一些关键的区别。&#xA;可变性：&#xA;StringBuilder 是可变的，即你可以通过调用方法（例如 append()、insert() 等）来更改其内容。这对于需要频繁拼接字符串的情况非常有用，因为它避免了每次更改字符串时都创建一个新的对象。 String 是不可变的，一旦创建了字符串对象，就不能更改其内容。每次对字符串进行操作（例如拼接、修改）时，都会创建一个新的字符串对象。 性能：&#xA;由于 StringBuilder 是可变的，它通常比频繁操作字符串时的 String 更高效。因为 StringBuilder 不需要每次都创建新的对象，而是在原有的基础上进行修改。 在需要频繁修改字符串的情况下，使用 StringBuilder 可以提升性能。 线程安全：&#xA;StringBuilder 不是线程安全的，它是非同步的。如果多个线程同时访问同一个 StringBuilder 实例，并且至少有一个线程修改了该实例，那么必须通过外部同步来确保其安全性。 String 是线程安全的，因为它是不可变的。多个线程可以安全地共享同一个 String 实例，而不必担心竞争条件。 如果你在代码中需要频繁修改字符串内容，且不需要线程安全性，那么选择 StringBuilder 是更好的选择。如果你需要创建一个不可修改的字符串，或者在多线程环境中操作字符串时需要线程安全性，那么选择 String 更合适。</description>
+      <title>面试小抄-Java 基础</title>
+      <link>http://hanburger.space/%E9%9D%A2%E8%AF%95%E5%B0%8F%E6%8A%84-java-%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Thu, 21 Mar 2024 15:08:15 +0800</pubDate>
+      <guid>http://hanburger.space/%E9%9D%A2%E8%AF%95%E5%B0%8F%E6%8A%84-java-%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;Java基础，缓慢补充。&lt;/p&gt;&#xA;&lt;hr&gt;</description>
     </item>
   </channel>
 </rss>
