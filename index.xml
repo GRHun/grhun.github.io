@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2020, Jane Doe.</copyright>
-    <lastBuildDate>Thu, 21 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://hanburger.space/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>内存取证的记录与简单思考</title>
+      <link>http://hanburger.space/%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81%E7%9A%84%E8%AE%B0%E5%BD%95%E4%B8%8E%E7%AE%80%E5%8D%95%E6%80%9D%E8%80%83/</link>
+      <pubDate>Sat, 06 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://hanburger.space/%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81%E7%9A%84%E8%AE%B0%E5%BD%95%E4%B8%8E%E7%AE%80%E5%8D%95%E6%80%9D%E8%80%83/</guid>
+      <description>&lt;p&gt;开一个新坑：内存取证。&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+    </item>
     <item>
       <title>面试小抄-Java 基础</title>
       <link>http://hanburger.space/%E9%9D%A2%E8%AF%95%E5%B0%8F%E6%8A%84-java-%E5%9F%BA%E7%A1%80/</link>
@@ -49,7 +56,7 @@
       <link>http://hanburger.space/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://hanburger.space/about/</guid>
-      <description>关于我： 一只生产日期为2000的赛博汉堡包&#xA;目前想做的：&#xA;好好休息：早点睡觉，放轻松； 多多记录：每天写日记，每月写博客； 认真工作：尽力做实验，找到一份满意工作。 </description>
+      <description>关于我： 一只生产日期为2000的赛博加密汉堡包。&#xA;目前想做的：&#xA;好好休息：早点睡觉，放轻松； 多多记录：每天写日记，每月写博客； 认真工作：尽力做实验，找到一份满意工作。 </description>
     </item>
   </channel>
 </rss>

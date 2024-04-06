@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://hanburger.space/images/favicon.png" />
+<title>内存取证的记录与简单思考 | ʕ•ᴥ•ʔ RHanbao&#39;s Blog</title>
+<meta name="title" content="内存取证的记录与简单思考" />
+<meta name="description" content="重拾内存取证." />
+<meta name="keywords" content="取证,工具," />
+
+
+<meta property="og:title" content="内存取证的记录与简单思考" />
+<meta property="og:description" content="重拾内存取证." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://hanburger.space/%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81%E7%9A%84%E8%AE%B0%E5%BD%95%E4%B8%8E%E7%AE%80%E5%8D%95%E6%80%9D%E8%80%83/" /><meta property="og:image" content="http://hanburger.space/images/share.png" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-04-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-04-06T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://hanburger.space/images/share.png" /><meta name="twitter:title" content="内存取证的记录与简单思考"/>
+<meta name="twitter:description" content="重拾内存取证."/>
+
+
+
+<meta itemprop="name" content="内存取证的记录与简单思考">
+<meta itemprop="description" content="重拾内存取证."><meta itemprop="datePublished" content="2024-04-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-04-06T00:00:00+00:00" />
+<meta itemprop="wordCount" content="158"><meta itemprop="image" content="http://hanburger.space/images/share.png" />
+<meta itemprop="keywords" content="取证,工具," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1 {
+    color: rgb(173, 50, 95);
+  }
+
+  h2 
+  {
+    color: rgb(16, 112, 10);
+  }
+
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: rgb(6, 3, 3);
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 80%;
+  }
+
+  img {
+    max-width: 80%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+    font-family: Consolas;
+
+  }
+
+  pre code {
+    color: rgb(56, 56, 56);
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 16px;
+    overflow-x: auto;
+    font-family: Consolas;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1 {
+    color: rgb(173, 50, 95);
+  }
+  
+    h2 {
+    color: rgb(16, 112, 10);
+  }
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>ʕ•ᴥ•ʔ RHanbao&#39;s Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+<a href="/about/">About</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>内存取证的记录与简单思考</h1>
+<p>
+  <i>
+    <time datetime='2024-04-06' pubdate>
+      06 Apr, 2024
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>开一个新坑：内存取证。</p>
+<hr>
+<h1 id="内存取证">内存取证</h1>
+<h1 id="简述">简述</h1>
+<h2 id="volatility">Volatility</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>volatility -f &lt;文件名&gt; --profile=&lt;配置文件&gt; &lt;插件&gt; [插件参数] 
+</span></span></code></pre></div><ul>
+<li>模块介绍</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>imageinfo：显示目标镜像的摘要信息，这常常是第一步---获取内存的操作系统类型及版本，之后可以在 –profile 中带上对应的操作系统，后续操作都要带上这一参数
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pslist：该插件列举出系统进程，但它不能检测到隐藏或者解链的进程，psscan可以
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>psscan：可以找到先前已终止(不活动)的进程以及被rootkit隐藏或解链的进程
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pstree：以树的形式查看进程列表，和pslist一样，也无法检测隐藏或解链的进程
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mendump：提取出指定进程，常用foremost 来分离里面的文件(历年美亚杯有此题)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>filescan：扫描所有的文件列表
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>hashdump：查看当前操作系统中的 password hash，例如 Windows 的 SAM 文件内容(实
+</span></span><span style="display:flex;"><span>际中没有mimikatz效果好)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svcscan：扫描 Windows 的服务
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>connscan：查看网络连接
+</span></span><span style="display:flex;"><span>netscan： 列出所有实时的网络连接信息，包括使用的协议类型、源地址、目的地址、双方的端口号、连接状态(LISTENING、CLOSED等)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cmdscan：可用于查看终端记录
+</span></span><span style="display:flex;"><span>cmdline 提取内存中保留的cmd命令使用情况
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dlllist: 列出某一进程加载的所有dll文件
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dumpfiles：导出某一文件(指定虚拟地址)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>hivelist: 列出所有的注册表项及其虚拟地址和物理地址
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>timeliner: 将所有操作系统事件以时间线的方式展开
+</span></span></code></pre></div><ul>
+<li>命令行</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>#查询操作系统及硬件架构
+</span></span><span style="display:flex;"><span>volatility -f mem.vmem imageinfo
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>#后续操作带上参数
+</span></span><span style="display:flex;"><span>volatility -f mem.vmem --profile=WinXPSP2x86 模块名
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>例如：
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>#pslist  列举进程信息
+</span></span><span style="display:flex;"><span>volatility -f mem.vmem --profile=WinXPSP2x86 pslist
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>netscan
+</span></span><span style="display:flex;"><span>volatility -f mem.vmem --profile=WinXPSP2x86 netscan
+</span></span></code></pre></div><p>offset(P)  协议类型     Local Address   Foreign Address State Pid Owner  创建时间</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>#memdump  将内存中的某个进程数据以 dmp 的格式保存出来 
+</span></span><span style="display:flex;"><span>volatility -f mem.vmem --profile=WinXPSP2x86 memdump -p [PID] -D [路径]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>#hivelist  列举缓存在内存的注册表
+</span></span><span style="display:flex;"><span>volatility -f mem.vmem --profile=WinXPSP2x86 hivelist
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>#hivedump  打印出注册表中的数据
+</span></span><span style="display:flex;"><span>volatility -f mem.vmem --profile=WinXPSP2x86 hivedump -o [注册表的virtual地址]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>#cmdscan  提取终端记录
+</span></span><span style="display:flex;"><span>#cmdline  提取内存中保留的cmd命令使用情况
+</span></span><span style="display:flex;"><span>volatility -f mem.vmem --profile=WinXPSP2x86 cmdscan
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>#screenshot -D 路径  获取截图
+</span></span><span style="display:flex;"><span>volatility -f mem.vmem --profile=WinXPSP2x86 screenshot -D [路径]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>#filescan  扫描文件列表(例如带有flag的文件)
+</span></span><span style="display:flex;"><span>volatility -f mem.vmem --profile=WinXPSP2x86 filescan | grep &#34;flag&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#获取SAM表中的用户
+</span></span><span style="display:flex;"><span>volatility -f mem.vmem --profile=WinXPSP2x86 printkey -K &#34;SAM\Domains\Account\Users\Names&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#获取最后登陆系统的用户
+</span></span><span style="display:flex;"><span>volatility -f mem.vmem --profile=WinXPSP2x86 printkey -K &#34;SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#timeliner  以时间线的方式，列出计算机的活动
+</span></span></code></pre></div>
+</content>
+<p>
+  
+  <a href="http://hanburger.space/blog/%E5%8F%96%E8%AF%81/">#取证</a>
+  
+  <a href="http://hanburger.space/blog/%E5%B7%A5%E5%85%B7/">#工具</a>
+  
+</p>
+
+  </main>
+  <footer>Thanks for your visit. The site is made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>
